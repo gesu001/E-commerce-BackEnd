@@ -17,20 +17,20 @@ Category.hasMany(Product, {
 
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
-  throught: {
+  through: {
     model: ProductTag,
     unique: false,
   },
-  as: 'product_tags'
+  as: 'tags'
 });
 
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
-  throught: {
+  through: {
     model: ProductTag,
     unique: false,
   },
-  as: 'tag_products'
+  as: 'products'
 });
 
 module.exports = {
