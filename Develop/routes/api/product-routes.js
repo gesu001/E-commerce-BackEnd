@@ -57,7 +57,7 @@ router.post('/', (req, res) => {
             tag_id,
           };
         });
-        console.log(productTagIdArr);
+        //console.log(productTagIdArr);
         return ProductTag.bulkCreate(productTagIdArr);
       }
       // if no product tags, just respond
@@ -65,7 +65,7 @@ router.post('/', (req, res) => {
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
-      console.log(err);
+      //console.log(err);
       res.status(400).json(err);
     });
 });
